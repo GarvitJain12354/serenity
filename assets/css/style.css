@@ -1,0 +1,1394 @@
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo-Light.eot");
+  src: url("../fonts/Exo-Light.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Exo-Light.woff2") format("woff2"),
+    url("../fonts/Exo-Light.woff") format("woff"),
+    url("../fonts/Exo-Light.ttf") format("truetype"),
+    url("../fonts/Exo-Light.svg#Exo-Light") format("svg");
+  font-weight: 300;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo-SemiBold.eot");
+  src: url("../fonts/Exo-SemiBold.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Exo-SemiBold.woff2") format("woff2"),
+    url("../fonts/Exo-SemiBold.woff") format("woff"),
+    url("../fonts/Exo-SemiBold.ttf") format("truetype"),
+    url("../fonts/Exo-SemiBold.svg#Exo-SemiBold") format("svg");
+  font-weight: 600;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+  font-family: "Exo";
+  src: url("../fonts/Exo-Regular.eot");
+  src: url("../fonts/Exo-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/Exo-Regular.woff2") format("woff2"),
+    url("../fonts/Exo-Regular.woff") format("woff"),
+    url("../fonts/Exo-Regular.ttf") format("truetype"),
+    url("../fonts/Exo-Regular.svg#Exo-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+
+@font-face {
+    font-family: 'Exo';
+    src: url('../fonts/Exo-Medium.eot');
+    src: url('../fonts/Exo-Medium.eot?#iefix') format('embedded-opentype'),
+        url('../fonts/Exo-Medium.woff2') format('woff2'),
+        url('../fonts/Exo-Medium.woff') format('woff'),
+        url('../fonts/Exo-Medium.ttf') format('truetype'),
+        url('../fonts/Exo-Medium.svg#Exo-Medium') format('svg');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+
+@font-face {
+  font-family: "Maven Pro";
+  src: url("../fonts/MavenPro-Regular.eot");
+  src: url("../fonts/MavenPro-Regular.eot?#iefix") format("embedded-opentype"),
+    url("../fonts/MavenPro-Regular.woff2") format("woff2"),
+    url("../fonts/MavenPro-Regular.woff") format("woff"),
+    url("../fonts/MavenPro-Regular.ttf") format("truetype"),
+    url("../fonts/MavenPro-Regular.svg#MavenPro-Regular") format("svg");
+  font-weight: normal;
+  font-style: normal;
+  font-display: swap;
+}
+body {
+  font-family: "Exo";
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  list-style: none;
+}
+a {
+  text-decoration: none;
+  display: inline-block;
+}
+p {
+  font-size: 23px;
+  color: #4a4a4a;
+  line-height: 37px;
+  margin-bottom: 20px;
+  font-family: "Maven Pro";
+}
+.custom-btn {
+    font-size: 16px;
+    font-family: "Exo";
+    font-weight: 500;
+    background-color: #324a2c;
+    color: white;
+    padding: 8px 16px;
+    border: 2px solid #324a2c;
+    transition: all 0.6s;
+}
+.custom-btn:hover {
+  background-color: transparent;
+  color: rgb(255, 255, 255);
+}
+.custom-btn span {
+  display: flex;
+  align-items: center;
+}
+.custom-btn div {
+  height: 24px;
+  overflow: hidden;
+}
+.text-center{
+  text-align: center;
+}
+.custom-btn span {
+  position: relative;
+  -webkit-transition: -webkit-transform 0.3s;
+  -moz-transition: -moz-transform 0.3s;
+  transition: transform 0.3s;
+  padding: 0px 10px;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+  font-size: 15px;
+  line-height: 26px;
+  text-transform: capitalize;
+}
+.custom-btn span::before {
+  position: absolute;
+  top: 100%;
+  content: attr(data-hover);
+  -webkit-transform: translate3d(0, 0, 0);
+  -moz-transform: translate3d(0, 0, 0);
+  transform: translate3d(0, 0, 0);
+  -webkit-text-stroke-color: transparent;
+  -webkit-text-stroke-width: initial;
+  color: #fff;
+}
+.custom-btn:hover span {
+  -webkit-transform: translateY(-100%);
+  -moz-transform: translateY(-100%);
+  transform: translateY(-100%);
+}
+.custom-btn span svg {
+  width: 25px;
+  height: 25px;
+  margin-left: 10px;
+}
+a.custom-btn:hover svg {
+  transform: translateY(24px);
+}
+a.custom-btn:hover svg g {
+  fill: #020202;
+}
+button.custom-btn:hover svg {
+  transform: translateY(24px);
+}
+button.custom-btn span::before{
+  color: black;
+}
+button.custom-btn:hover svg g {
+  fill: #020202;
+}
+
+.container-fluid {
+  padding: 0 15px;
+}
+.container {
+  width: 100%;
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 15px;
+}
+@media (min-width: 1440px) {
+  .container {
+    max-width: 1400px;
+  }
+}
+.row {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -15px;
+  align-items: center;
+}
+.col-1 {
+  flex: 0 0 8.33333333%;
+  width: 8.33333333%;
+  padding: 0 15px;
+}
+.col-2 {
+  flex: 0 0 16.66666667%;
+  width: 16.66666667%;
+  padding: 0 15px;
+}
+.col-3 {
+  flex: 0 0 25%;
+  width: 25%;
+  padding: 0 15px;
+}
+.col-4 {
+  flex: 0 0 33.33333333%;
+  width: 33.33333333%;
+  padding: 0 15px;
+}
+.col-5 {
+  flex: 0 0 41.66666667%;
+  width: 41.66666667%;
+  padding: 0 15px;
+}
+.col-6 {
+  flex: 0 0 50%;
+  width: 50%;
+  padding: 0 15px;
+}
+.col-7 {
+  flex: 0 0 58.33333333%;
+  width: 58.33333333%;
+  padding: 0 15px;
+}
+.col-8 {
+  flex: 0 0 66.66666667%;
+  width: 66.66666667%;
+  padding: 0 15px;
+}
+.col-9 {
+  flex: 0 0 75%;
+  width: 75%;
+  padding: 0 15px;
+}
+.col-10 {
+  flex: 0 0 83.33333333%;
+  width: 83.33333333%;
+  padding: 0 15px;
+}
+.col-11 {
+  flex: 0 0 91.66666667%;
+  width: 91.66666667%;
+  padding: 0 15px;
+}
+.col-12 {
+  flex: 0 0 100%;
+  width: 100%;
+  padding: 0 15px;
+}
+/* h1{
+    font-size: 55px;
+    color: red;
+    font-family: 'Exo';
+    font-weight: 700;
+} */
+.custom-heading {
+  font-size: 38px;
+  font-family: "Exo";
+  font-weight: 700;
+  color: #324a2c;
+  padding-bottom: 45px;
+  line-height: 42px;
+}
+
+/* ========================================================================================================== */
+/* =============header-css-start=============== */
+header {
+  padding: 25px 65px 0px;
+  position: absolute;
+  width: 100%;
+  top: 0;
+  left: 0;
+  right: 0;
+  z-index: 99999;
+}
+header.header .header-desh {
+  padding-bottom: 40px;
+  position: relative;
+}
+.header-desh:after {
+  content: "";
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 0%;
+  border-bottom: 2px solid white;
+  transition: all 0.8s linear;
+}
+body.animation-border .header-desh:after {
+  width: 100%;
+}
+.logo {
+  width: 100%;
+  max-width: 152px;
+}
+.logo a {
+  display: flex;
+}
+.header-right {
+    display: flex;
+    justify-content: end;
+    align-items: center;
+    position: relative;
+    top: 6px;
+}
+nav.header-nav ul {
+  display: flex;
+  justify-content: end;
+}
+nav.header-nav ul li a {
+    color: white;
+    font-size: 16px;
+    margin: 20px;
+    position: relative;
+    font-weight: 500;
+}
+nav.header-nav ul li a:after {
+  content: "";
+  position: absolute;
+  bottom: -7px;
+  left: 0;
+  height: 2px;
+  width: 0;
+  transition: all 0.4s linear;
+  background-color: white;
+}
+nav.header-nav ul li a:hover:after {
+  width: 100%;
+}
+.header-btn {
+  text-align: center;
+  margin-left: 30px;
+}
+.toogle-btn-lg {
+  display: none;
+}
+/* ==============header-css-end================ */
+/* =======banner-section-start======= */
+section.banner-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0 20px;
+}
+.banner-heading {
+  text-align: center;
+}
+.banner-heading h1 {
+  font-size: 55px;
+  color: white;
+  font-weight: 600;
+  margin-bottom: 28px;
+}
+.banner-btn a:first-child {
+  margin-right: 20px;
+}
+.banner-btn a:last-child {
+  background-color: #ab781f;
+  border: 2px solid #ab781f;
+}
+.banner-btn a:last-child:hover {
+  background-color: transparent;
+}
+/* ======banner-section-end======== */
+/* ====about-section-start==== */
+section.about-section {
+  padding: 64px 65px 70px;
+  overflow: hidden;
+}
+.about-img img {
+  width: 100%;
+}
+.about-content p {
+  width: 100%;
+  max-width: 535px;
+  padding-bottom: 30px;
+}
+.about-content {
+  padding-left: 95px;
+}
+.about-section-btn a {
+  display: inline-flex;
+  align-items: center;
+}
+.about-section-btn a img,
+.about-section-btn button img {
+  margin-left: 10px;
+  width: 20px;
+}
+.about-section-btn a:hover img,
+.about-section-btn button:hover img {
+  filter: invert(1);
+  transform: translateY(24px);
+}
+.about-section-btn a:hover span::before {
+  color: #020202;
+}
+/* ====about-section-end==== */
+/* ====easy-section-start==== */
+section.easy-section {
+  overflow: hidden;
+}
+.easy-img {
+    max-width: 608px;
+    width: 100%;
+    height: 440px;
+}
+.easy-img img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+section.easy-section .row {
+  background-color: #ab781f;
+}
+.easy-content {
+  padding-left: 63px;
+}
+.easy-content h2 {
+  color: white;
+  padding-bottom: 35px;
+}
+.easy-content > p:nth-child(3) {
+  margin-top: 28px;
+  margin-bottom: 30px;
+}
+.easy-content p {
+    width: 100%;
+    color: white;
+    max-width: 800px;
+    line-height: 29px;
+}
+.easy-btn {
+    padding-top: 3px;
+}
+/* ====easy-section-end==== */
+/* --- transform-section-start---  */
+section.transform-section {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-color: #e6e3cf;
+  padding-bottom: 0 !important;
+  padding: 74px 65px;
+}
+.transform-section p {
+    width: 100%;
+    max-width: 664px;
+    padding-bottom: 30px;
+    line-height: 36px;
+}
+.transform-section .row .col-6:first-child {
+  order: 1;
+}
+.transform-section .about-content h2 {
+  width: 100%;
+  max-width: 400px;
+  line-height: 45px;
+  padding-bottom: 0 !important;
+}
+.transform-section .about-content {
+  padding-left: 0;
+}
+.transform-section .about-content h5 {
+    font-size: 26px;
+    color: #4a4a4a;
+    font-weight: 400;
+    width: 100%;
+    line-height: 37px;
+    max-width: 520px;
+    padding: 42px 0;
+    font-family: "Maven Pro";
+}
+.heading_btn-sp {
+    padding-bottom: 50px;
+}
+/* --- transform-section-end---  */
+
+/*================= Review section =============*/
+.serenity-review-wrapper {
+  width: 122%;
+}
+.serenity-review {
+  overflow: hidden;
+}
+.serenity-review {
+  padding-top: 105px;
+  padding-bottom: 135px;
+}
+.serenity-re-inner {
+  border: 1px solid #3a4e2c;
+  padding: 35px;
+  height: 100%;
+  position: relative;
+  padding-bottom: 55px;
+}
+.serenity-re-inner h4 {
+    font-size: 23px;
+    font-weight: 400;
+    color: #3a4e2c;
+    position: absolute;
+    font-family: "Maven Pro";
+    bottom: 28px;
+}
+.serenity-re-inner p {
+    line-height: 29px;
+    margin-bottom: 0;
+    padding-bottom: 31px;
+    height: 100%;
+}
+.testimonial-sliders-j .owl-nav button {
+  height: 29px;
+  width: 40px;
+}
+.testimonial-sliders-j .owl-nav button span {
+  opacity: 0;
+}
+.testimonial-sliders-j .owl-nav .owl-prev {
+  background-image: url(../images/slider-left-arrow.svg) !important;
+  background-repeat: no-repeat !important;
+  margin-right: 14px;
+  background-size: contain !important;
+}
+.testimonial-sliders-j .owl-nav {
+  margin-top: 54px;
+}
+.testimonial-sliders-j .owl-nav .owl-next {
+  background-image: url(../images/slider-rightarrow.svg) !important;
+  background-repeat: no-repeat !important;
+  background-size: contain !important;  
+}
+.testimonial-sliders-j .owl-stage {
+  display: inline-flex;
+  left: 1.5px;
+}
+/*(2) the direct div of each element in the owl carousel*/
+.testimonial-sliders-j .items { height: 100%; }
+/*================= Review section =============*/
+
+/*================= Insatgram section =============*/
+.serenity-insatgram img {
+  width: 100%;
+}
+section.serenity-insatgram {
+  overflow: hidden;
+}
+section.serenity-insatgram h2 {
+  padding-bottom: 42px;
+}
+.serenity-insatgram a {
+  display: flex;
+  box-shadow: 0px 10px 20px #ccc;
+}
+.serenity-insatgram .col-4 {
+  padding: 0 30px;
+}
+.serenity-insatgram .row {
+  margin: 0 -30px;
+}
+.serenity-instagram-btn.about-section-btn a {
+  display: inline-block;
+  margin-top: 52px;
+}
+/*================= Insatgram section =============*/
+
+/* --- product-section-start---  */
+section.product-section {
+  background-color: #e6e3cf;
+  padding: 180px 0 155px;
+  overflow: hidden;
+}
+.product-heading h2 {
+    padding-bottom: 100px;
+    font-size: 57px;
+}
+.product-heading {
+  text-align: center;
+}
+.product-main-row {
+    background-color: white;
+    margin-bottom: 95px;
+    box-shadow: 5px 5px 10px -5px #919191;
+}
+.product-img {
+  height: 460px;
+}
+.product-img a {
+  height: 100%;
+  width: 100%;
+}
+.product-img a img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.product-content {
+    padding-left: 37px;
+    padding-right: 37px;
+}
+.product-content h3 {
+    padding-bottom: 40px;
+}
+.product-content p {
+  width: 100%;
+  max-width: 660px;
+  padding-bottom: 14px;
+}
+.product-3-child h3 {
+  padding-bottom: 43px;
+  padding-top: 18px;
+}
+.product-salider-mb {
+  display: none;
+}
+
+/* --- product-section-end---  */
+/* --- outdoor-section-start---  */
+section.outdoor-section {
+    padding: 190px 0 121px;
+}
+.outdoor-heading {
+  text-align: center;
+  padding-bottom: 56px;
+}
+.outdoor-heading h2 {
+  padding-bottom: 4px;
+}
+.outdoor-heading p {
+  font-size: 26px;
+}
+.container123 {
+  display: grid;
+  place-content: center;
+  position: relative;
+  overflow: hidden;
+  border-radius: 0;
+  --position: 50%;
+}
+
+.image-container {
+  max-width: 100%;
+}
+
+.slider-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  object-position: left;
+}
+
+.image-before {
+  position: absolute;
+  inset: 0;
+  width: var(--position);
+}
+
+.slider {
+  position: absolute;
+  inset: 0;
+  cursor: pointer;
+  opacity: 0;
+  /* for Firefox */
+  width: 100%;
+  height: 100%;
+}
+
+.slider:focus-visible ~ .slider-button {
+  outline: 5px solid black;
+  outline-offset: 3px;
+}
+
+.slider-line {
+  position: absolute;
+  inset: 0;
+  width: 0.2rem;
+  height: 100%;
+  background-color: #fff;
+  /* z-index: 10; */
+  left: var(--position);
+  transform: translateX(-50%);
+  pointer-events: none;
+}
+
+.slider-button {
+  position: absolute;
+  background-color: #fff;
+  color: black;
+  padding: 0.1rem;
+  border-radius: 100vw;
+  display: grid;
+  place-items: center;
+  top: 50%;
+  left: var(--position);
+  transform: translate(-50%, -50%);
+  pointer-events: none;
+  /* z-index: 100; */
+  box-shadow: 1px 1px 1px hsl(0, 50%, 2%, 0.5);
+}
+/* --- outdoor-section-end---  */
+/* =====footer-css-start====== */
+.footer {
+    overflow: hidden;
+    padding: 80px 80px 16px;
+    background: #fefbfa;
+}
+
+.footer-logo {
+  width: 100%;
+  max-width: 250px;
+}
+.footer-logo a {
+  display: flex;
+}
+.footer-email {
+  padding-bottom: 12px;
+}
+.footer-contact{
+  padding-top: 75px;
+}
+.footer-email a {
+    font-size: 20px;
+    font-weight: normal;
+    color: #324a2c;
+    font-family: "Maven Pro";
+}
+.footer-contact-inner a {
+  font-size: 18px;
+  font-weight: normal;
+  color: #324a2c;
+}
+.footer-right .row {
+    align-items: flex-start;
+    width: 100%;
+    max-width: 638px;
+    margin-left: auto;
+    justify-content: space-between;
+}
+.footer-right h5 {
+  font-size: 23px;
+  color: #324a2c;
+  padding-bottom: 45px;
+}
+.footer-right ul li a {
+    color: #545454;
+    font-size: 20px;
+    padding-bottom: 17px;
+    font-family: "Maven Pro";
+}
+.social-media ul {
+    display: flex;
+    align-items: center;
+    width: 100%;
+}
+.social-media a {
+    padding-bottom: 0 !important;
+}
+.social-media ul li {
+    max-width: 33.33%;
+    flex: 0 0 33.33%;
+}
+.footer-right ul li a img {
+  height: 100%;
+  width: 18px;
+}
+.footer-bottom {
+  padding-top: 110px;
+}
+.footer-bottom-right {
+    text-align: right;
+}
+.footer-right {
+    padding-right: 14px;
+    padding-top: 100px;
+}
+.footer-bottom-left p {
+  font-size: 17px;
+}
+.footer-bottom-right p {
+  font-size: 17px;
+}
+.main-footer-accordion {
+  display: none;
+}
+.main-footer .row {
+    align-items: initial;
+}
+/* =====footer-css-start====== */
+.mb-show {
+  display: none !important;
+}
+.esay-none {
+  display: none;
+}
+.footer-bottom-right p a {
+    color: #4a4a4a;
+}
+.logo a img {
+    width: 100%;
+}
+nav.header-nav .logo {
+    display: none;
+}
+/* ================================contact-page-css-start======================================= */
+/* =====contact-banner-css-start===== */
+section.contact-banner {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 1080px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.contact-banner-heading h2 {
+  color: white;
+  font-size: 55px;
+}
+section.contact-form-section {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    width: 100%;
+    padding: 190px 0;
+    background-color: #e6e3cf;
+}
+.form-left {
+  height: 460px;
+  width: 100%;
+  max-width: 430px;
+  background-color: #324a2c;
+}
+.textarea textarea:focus {
+    outline: none;
+}
+.form-left-inner {
+  padding: 30px;
+}
+.form-left-inner-num p {
+    color: white;
+    margin-bottom: 0;
+    font-size: 21px;
+}
+.form-left-inner-num h5 {
+    color: white;
+    font-family: "Maven Pro";
+    font-size: 29px;
+    font-weight: 100;
+}
+.form-left-inner-email p {
+    color: white;
+    margin-bottom: 0;
+    font-family: "Maven Pro";
+    font-size: 21px;
+}
+.form-left-inner-email h5 {
+  color: white;
+  font-size: 28px;
+  font-family: "Maven Pro";
+  font-weight: 100;
+}
+
+.form-left-inner-num {
+  padding-bottom: 80px;
+}
+.form-left-img {
+  width: 135px;
+}
+.form-left-img img {
+    height: 100%;
+    width: 100%;
+    object-fit: cover;
+    animation: animName 10s linear infinite;
+}
+.form-left-inner-email {
+  padding-bottom: 48px;
+}
+.form-left-inner {
+  padding: 30px 40px;
+}
+.textarea textarea {
+    height: 150px !important;
+    width: 100% !important;
+    resize: none;
+    border: none;
+    padding: 30px;
+    font-size: 18px;
+    margin-bottom: 35px;
+    font-family: "Maven Pro";
+    box-shadow: 5px 5px 7px -2px #d3d0be;
+}
+
+.contact-form-right .f-name {
+    padding-bottom: 60px;
+}
+.contact-form-right .textarea textarea {
+    height: 215px !important;
+    margin-bottom: 55px;
+}
+.contact-form-right button.custom-btn {
+    height: 55px;
+}
+
+input {
+    padding: 11px 20px;
+    border: none;
+    font-size: 20px;
+    color: rgb(50 74 44);
+    width: 100%;
+    font-family: "Maven Pro";
+    box-shadow: 5px 5px 7px -2px #d3d0be;
+}
+input:focus {
+  outline: none;
+  border-radius: 1px;
+}
+.email {
+  margin-right: 50px;
+}
+.form-section-perent .row {
+  align-items: start;
+}
+.form-btn button {
+  display: flex;
+  align-items: center;
+  height: 45px;
+  padding: 8px 35px;
+}
+.form-btn button img {
+  margin-left: 10px;
+}
+.form-btn button:hover img {
+  filter: invert(1);
+}
+.form-btn button:hover {
+  background-color: transparent;
+  color: #324a2c;
+}
+.form-flex {
+  display: flex;
+  flex-wrap: wrap;
+  margin: 0 -20px;
+}
+.f-name {
+  flex: 0 0 50%;
+  max-width: 50%;
+  padding: 0px 20px 45px;
+}
+/* =====contact-banner-css-end===== */
+/* ================================contact-page-css-end======================================= */
+/* ================================product-page-css-start======================================= */
+/* ===product-banner-section-css-start=== */
+section.product-banner {
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+  height: 1080px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+section.product-section-pg {
+    padding: 110px 0 35px;
+}
+.product-banner-heading {
+  text-align: center;
+}
+.product-banner-heading h2 {
+    color: white;
+    padding-bottom: 15px;
+    font-size: 55px;
+    line-height: 37px;
+    font-family: "Maven Pro";
+    font-weight: 100;
+}
+.serenity-lux-content .product-banner-btn .custom-btn span::before {
+  color: #000;
+}
+.product-banner-btn a:last-child {
+  background-color: #ab781f;
+  border-color: #ab781f;
+  margin-left: 20px;
+}
+.product-main-section {
+  display: block;
+}
+.product-banner-btn a:last-child:hover {
+  background-color: transparent;
+}
+/* ===product-banner-section-css-end=== */
+/* ===section.Serenity-Lux-section-css-start=== */
+section.Serenity-Lux-section {
+  padding: 73px 0 98px;
+}
+.serenity-lux-heading {
+    padding-bottom: 15px;
+}
+.serenity-lux-content p:first-child {
+    font-size: 26px;
+}
+.serenity-lux-content p {
+    padding-bottom: 20px;
+}
+.product-banner-btn {
+  padding-top: 20px;
+}
+/* ===section.Serenity-Lux-section-css-start=== */
+.recent-prodcut-salide {
+  height: 70vh;
+}
+.recent-prodcut-salide img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+.recent-prodcut .serenity-review-wrapper {
+  width: 100%;
+}
+.recent-product-heading h2 {
+  padding-bottom: 11px;
+}
+.recent-product-heading {
+    text-align: center;
+    padding-bottom: 55px;
+}
+.recent-product-j .owl-nav button {
+  height: 29px;
+  width: 40px;
+}
+.recent-product-j .owl-nav .owl-prev {
+    background-image: url(../images/slider-left-arrow.svg) !important;
+    background-repeat: no-repeat !important;
+    margin-right: 14px;
+    background-size: contain !important;
+}
+.recent-product-j .owl-nav .owl-next {
+    background-image: url("../images/slider-rightarrow.svg") !important;
+    background-repeat: no-repeat !important;
+    background-size: contain !important;
+}
+.recent-product-j .owl-nav button span {
+  opacity: 0;
+}
+.recent-product-j .owl-nav {
+    margin: 55px 0 10px;
+    text-align: center;
+}
+.recent-prodcut {
+    padding-bottom: 50px;
+}
+.recent-prodcut.prodcut_parent-btm {
+    padding-bottom: 0;
+}
+/* ==========section.lux-accordion============= */
+.lux-accordion {
+    padding: 133px 65px 145px;
+}
+.serenity-review h2 {
+    padding-bottom: 60px;
+}
+.serenity-review-pg {
+  padding: 105px 0 105px;
+}
+.lux-accordion-heading h2 {
+    padding-left: 40px;
+    padding-bottom: 15px;
+}
+
+/* accordion */
+.main-perent-accordion .accordion {
+  width: 100%;
+  max-width: 1745px;
+  margin: 2rem auto;
+}
+.main-perent-accordion .accordion-item {
+  background-color: #fff;
+  color: #111;
+  margin: 2rem 0;
+  border-radius: 0;
+  box-shadow: 0 2px 5px 0 rgba(0, 0, 0, 0.25);
+}
+.main-perent-accordion .accordion-item-header {
+  padding: 25px 40px 20px 40px;
+  min-height: 3.5rem;
+  line-height: 1.25rem;
+  display: flex;
+  align-items: center;
+  position: relative;
+  cursor: pointer;
+  color: #324a2c;
+  font-size: 23px;
+  font-weight: normal;
+}
+.accordion-item-header::after {
+  content: "\002B";
+  font-size: 2rem;
+  position: absolute;
+  right: 50px;
+  font-weight: 700;
+}
+.accordion-item-header.active::after {
+  content: "\2212";
+}
+.accordion-item-body {
+  max-height: 0;
+  overflow: hidden;
+  transition: max-height 0.2s ease-out;
+}
+.main-perent-accordion .accordion-item-body-content {
+    padding: 1rem 3rem;
+    line-height: 1.5rem;
+    border-top: 1px solid;
+    border-image: linear-gradient(to right, transparent, #34495e, transparent) 1;
+    font-family: "Maven Pro";
+    font-size: 17px;
+}
+@media (max-width: 767px) {
+  html {
+    font-size: 13px;
+  }
+  .logo a img{
+    height: 8rem ;
+    width: 8rem;
+  }
+}
+
+/* accordion */
+section.get-free {
+    padding: 25px 65px 0;
+}
+.get-free-main {
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  height: 460px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+.get-free-heading h2 {
+  padding-bottom: 30px;
+  color: white;
+}
+.get-free-heading {
+  text-align: center;
+}
+/* ==========section.lux-accordion============= */
+/* ================================product-page-css-end======================================= */
+/* ================================f&Q-page-css-start======================================= */
+.faq-banner h2.custom-heading {
+    font-size: 55px;
+    font-family: "Exo";
+    font-weight: 700;
+}
+section.faq-accordion {
+    padding: 80px 65px 60px !important;
+}
+/* ================================f&Q-page-css-end======================================= */
+/* ================================about-us-page-css-start======================================= */
+section.about-image-section {
+  padding: 80px 65px 130px;
+}
+.about-banner h2.custom-heading {
+    font-family: 'Exo';
+    font-weight: 700;
+}
+.about-image-inner {
+    /* height: 671px; */
+    padding: 0 20px 0px;
+    position: relative;
+    margin-bottom: 55px;
+}
+
+
+.about-image-small {
+    position: absolute;
+    width: 50%;
+    right: 0;
+    top: 0;
+    height: 100%;
+    text-align: center;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.about-image-small img {
+    width: 100%;
+    max-width: 280px;
+    animation: animName 10s linear infinite;
+}
+.about-image-small .logo-text-cricle{
+    width: 100%;
+    max-width: 280px;
+    animation: animName 10s linear infinite;
+}
+
+
+.about-image-inner img {
+  width: 100%;
+}
+.frequently-btn  a.custom-btn:hover span::before {
+    color: #324a2c;
+}
+.hide_cnts-about{
+  display: none;
+}
+@keyframes animName {
+ 0%{
+    transform: rotate(0deg);
+   }
+100%{
+    transform: rotate(360deg);
+   }
+}
+.about-image-content {
+  margin: 0 20px;
+  border-bottom: 2px solid #324a2c;
+  padding-bottom: 10px;
+}
+.about-image-content p {
+    padding-bottom: 51px;
+    margin: 0;
+    line-height: 44px;
+}
+.about-image-btn {
+  margin: 30px 20px;
+}
+.about-image-btn a {
+    font-size: 23px;
+    color: #545454;
+}
+section.Frequently-section {
+  background-color: #e6e3cf;
+}
+.frequently-btn a {
+  padding: 8px 30px;
+  margin-left: 41px;
+  margin-top: 13px;
+}
+/* ================================about-us-page-css-end======================================= */
+/* ================================get-a-quote-page-css-start======================================= */
+.quote-main .form-flex .f-name:nth-child(3) {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+.quote-main .form-flex .f-name:nth-child(6) {
+  flex: 0 0 100%;
+  max-width: 100%;
+}
+section.get-a-quote-section {
+  padding: 93px 0 90px;
+}
+.get-a-quote-section h2 {
+    padding-bottom: 40px;
+}
+.quote-main {
+  width: 100%;
+  max-width: 751px;
+  margin: 0 auto;
+}
+a.get-a-quote-custom-btn svg {
+    margin-left: 0;
+}
+a.custom-btn.get-a-quote-custom-btn:hover svg path {
+    stroke: #324a2c;
+}
+a.get-a-quote-custom-btn {
+    padding: 7px 0px;
+}
+header.quote-header {
+  position: initial;
+  background-color: white;
+}
+.get-a-qoute-section-headng p {
+  line-height: 38px;
+  font-family: "Maven Pro";
+  width: 100%;
+  max-width: 715px;
+  margin-bottom: 40px;
+}
+.checkbox-form {
+  display: flex;
+  align-items: center;
+  padding-bottom: 30px;
+  position: relative;
+}
+.checkbox-form input[type="checkbox"] {
+  flex: 0 0 5%;
+  max-width: 5%;
+  height: 30px;
+  box-shadow: none;
+}
+
+.checkbox-form input {
+  padding: 0;
+  height: initial;
+  width: initial;
+  margin-bottom: 0;
+  display: none;
+  cursor: pointer;
+}
+
+.checkbox-form label {
+    position: relative;
+    cursor: pointer;
+    display: flex;
+}
+.checkbox-form label:before {
+    content: '';
+    -webkit-appearance: none;
+    background-color: transparent;
+    border: 1px solid #8f8f8f;
+    box-shadow: 0 1px 2px rgba(0, 0, 0, 0.05), inset 0px -15px 10px -12px rgba(0, 0, 0, 0.05);
+    padding: 10px;
+    display: inline-block;
+    position: relative;
+    vertical-align: middle;
+    cursor: pointer;
+    margin-right: 15px;
+}
+.checkbox-form input:checked + label:after {
+    content: '';
+    display: block;
+    position: absolute;
+    top: 3px;
+    left: 8px;
+    width: 5px;
+    height: 11px;
+    border: solid #324a2c;
+    border-width: 0 2px 2px 0;
+    transform: rotate(45deg);
+} 
+.checkbox-form label {
+    margin-left: 0 !important;
+}
+.checkbox-form label {
+    flex: 95%;
+    max-width: 95%;
+    margin-left: 20px;
+    font-size: 20px;
+    color: #959595;
+    font-family: "Maven Pro";
+}
+/* ================================get-a-quote-page-css-end======================================= */
+
+
+
+
+.preloader {
+    height: 100vh;
+    background: #E7E2CF;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    max-width: 100vw;
+    z-index: 9999999999;
+    position: fixed;
+    width: 100%;
+}
+.logo-wrp {
+  max-width: 180px;
+  width: 100%;
+  overflow: hidden;
+  position: relative;
+}
+.preloader img {
+    margin: auto auto;
+    animation: animName 10s linear infinite;
+}
+.preloader-logo {
+    max-width: 300px;
+    width: 100%;
+}
+/*.logo-ov {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    height: 100%;
+    width: 100%;
+    background: #e7e2cf;
+    opacity: 1;
+}*/
+
+/* .child-menu {
+  position: absolute;
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  padding: 16px;
+  max-width: 106px;
+  background-color: #324a2c;
+  z-index: 999;
+}
+.child-menu li {
+  padding: 10px 5px;
+}
+.child-menu li a {
+  margin: 5px 0 !important;
+} */
